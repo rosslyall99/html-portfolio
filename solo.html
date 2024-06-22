@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slanj SMF - Solo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <!-- Logo-->
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logos/NewSlanjLogoGrey.svg" alt="Slanj Kilts Logo" width="80">
+        </a>
+        <!-- Toggler Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#custDetails">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#hireDetails">Hire</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Outfit
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#outfitKilt">Kilt</a>
+                        <a class="dropdown-item" href="#outfitJacket">Jacket</a>
+                        <a class="dropdown-item" href="#outfitSporran">Sporran</a>
+                        <a class="dropdown-item" href="#outfitShoes">Shoes</a>
+                        <a class="dropdown-item" href="#outfitSocks">Socks</a>
+                        <a class="dropdown-item" href="#outfitFlashes">Flashes</a>
+                        <a class="dropdown-item" href="#outfitTies">Ties</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#extras">Extras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#sizes">Measurements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#submit">Submit</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Form -->
+    <div class="container">
+        <form action="/submit">
+            <div class="container-fluid" id="custDetails">
+                <!-- Customer Details -->
+                <div class="container-fluid border border-dark shadow mb-5">
+                    <section class="row custContainer py-3 border-bottom border-dark">
+                        <h2 class="text-center">Customer Details</h2>
+                    </section>
+                    <div class="row p-2 mt-3">
+                        <!-- First name -->
+                        <div class="col-md-6">
+                            <h3 class="text-left mb-0 text-black">First Name</h3>
+                            <input type="text" name="firstName" class="form-control formInput border border-dark"
+                                required>
+                        </div>
+                        <!-- Last name -->
+                        <div class=" col-md-6">
+                            <h3 class="text-left mb-0 text-black">Last Name</h3>
+                            <input type="text" name="lastName" class="form-control formInput border border-dark"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class=" row p-2">
+                        <!-- Phone -->
+                        <div class="col-md-6">
+                            <h3 class="text-left mb-0 text-black">Phone Number</h3>
+                            <input type="tel" name="phone" class="form-control formInput border border-dark" required>
+                        </div>
+                        <!-- Email -->
+                        <div class=" col-md-6">
+                            <h3 class="text-left mb-0 text-black">Email Address</h3>
+                            <input type="email" name="email" class="form-control formInput border border-dark" required>
+                        </div>
+                    </div>
+
+                    <div class="row p-2">
+                        <!-- Age -->
+                        <div class="col-md-6 form-group">
+                            <h3 class="text-left mb-0 text-black">Age Group</h3>
+                            <select class="form-select formInput border border-dark" name="ageRange" id="ageRange"
+                                required>
+                                <option hidden selected disabled></option>
+                                <option value="child">Child (Under 14)</option>
+                                <option value="adult">Adult (Over 14)</option>
+                            </select>
+                        </div>
+                        <!-- Height -->
+                        <div class="col-md-6 mb-3 form-group">
+                            <h3 class="text-left mb-0 text-black">Height</h3>
+                            <select class="form-select formInput border border-dark" name="height" id="height" required>
+                                <option hidden selected disabled></option>
+                                <option value="153">5'0" (153cm)</option>
+                                <option value="155">5'1" (155cm)</option>
+                                <option value="158">5'2" (158cm)</option>
+                                <option value="161">5'3" (161cm)</option>
+                                <option value="163">5'4" (163cm)</option>
+                                <option value="166">5'5" (166cm)</option>
+                                <option value="168">5'6" (168cm)</option>
+                                <option value="171">5'7" (171cm)</option>
+                                <option value="173">5'8" (173cm)</option>
+                                <option value="176">5'9" (176cm)</option>
+                                <option value="178">5'10" (178cm)</option>
+                                <option value="181">5'11" (181cm)</option>
+                                <option value="183">6'0" (183cm)</option>
+                                <option value="186">6'1" (186cm)</option>
+                                <option value="188">6'2" (188cm)</option>
+                                <option value="191">6'3" (191cm)</option>
+                                <option value="194">6'4" (194cm)</option>
+                                <option value="196">6'5" (196cm)</option>
+                                <option value="199">6'6" (199cm)</option>
+                                <option value="201">6'7" (201cm)</option>
+                                <option value="204">6'8" (204cm)</option>
+                                <option value="206">6'9" (206cm)</option>
+                                <option value="209">6'10" (209cm)</option>
+                                <option value="211">6'11" (211cm)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" id="hireDetails">
+                <!-- Hire Details -->
+                <div class=" container-fluid border border-dark shadow mb-5">
+                    <section class="row hireContainer py-3 border-bottom border-dark">
+                        <h2 class="text-center">Hire Details</h2>
+                    </section>
+                    <div class="row p-2 mt-3">
+                        <!-- Collection date -->
+                        <div class="col-md-4">
+                            <h3 class="text-left mb-0 text-black">Collection Date</h3>
+                            <input type="date" class="form-control formInput border border-dark">
+                        </div>
+                        <!-- Function date -->
+                        <div class=" col-md-4">
+                            <h3 class="text-left mb-0 text-black">Function Date</h3>
+                            <input type="date" class="form-control formInput border border-dark">
+                        </div>
+                        <!-- Return date -->
+                        <div class=" col-md-4">
+                            <h3 class="text-left mb-0 text-black">Return Date</h3>
+                            <input type="date" class="form-control formInput border border-dark">
+                        </div>
+                    </div>
+
+                    <div class="row p-2 mb-3">
+                        <!-- Collection Branch -->
+                        <div class="col-md-6 form-group">
+                            <h3 class="text-left mb-0 text-black">Collection Branch</h3>
+                            <select class="form-select formInput border border-dark" name="colBranch" id="colBranch"
+                                required>
+                                <option hidden selected disabled></option>
+                                <option value="duke">604 Duke Street, Glasgow, G31 1JX</option>
+                                <option value="stenoch">30 St Enoch Square, Glasgow, G1 4DB</option>
+                            </select>
+                            <h3 id="infoText" class="text-center my-2 text-black">We recommend collecting your outfit
+                                from
+                                Duke
+                                Street as there is a lot more stock there. If incorrect sizes are submitted, we have a
+                                better
+                                chance of finding a more suitable garment.</h3>
+                        </div>
+
+                        <!-- Return Branch -->
+                        <div class="col-md-6 form-group">
+                            <h3 class="text-left mb-0 text-black">Return Branch</h3>
+                            <select class="form-select formInput border border-dark" name="retBranch" id="retBranch"
+                                required>
+                                <option hidden selected disabled></option>
+                                <option value="duke">604 Duke Street, Glasgow, G31 1JX</option>
+                                <option value="stenoch">30 St Enoch Square, Glasgow, G1 4DB</option>
+                            </select>
+                            <h3 id="infoText" class=" text-center my-2 text-black">You can return your outfits to either
+                                branch. However,
+                                please be aware that Duke Street is closed on a Sunday.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <!-- Outfit Details -->
+                <div class="container-fluid border border-dark shadow mb-5">
+                    <section class="row outfitContainer py-3 border-bottom border-dark">
+                        <h2 class="text-center">Outfit Details</h2>
+                    </section>
+                    <!-- Kilt tartan -->
+                    <div class="row text-center py-2 my-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitKilt">
+                        <h2>Kilt</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="isleofskye">
+                                <img class="img-fluid" src="/images/kilts/isleOfSkye.jpg" alt="Isle of Skye Kilt">Isle
+                                Of Skye
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="ancientPatriot">
+                                <img class="img-fluid" src="/images/kilts/ancientPatriot.jpg"
+                                    alt="Ancient Patriot Kilt">Ancient Patriot
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="greySlanj">
+                                <img class="img-fluid" src="/images/kilts/greySlanj.jpg" alt="Grey Slanj Kilt">Grey
+                                Slanj
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="spiritOfGlasgow">
+                                <img class="img-fluid" src="/images/kilts/spiritOfGlasgow.jpg"
+                                    alt="Spirit of Glasgow Kilt">Spirit of Glasgow
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="purpleSlanj">
+                                <img class="img-fluid" src="/images/kilts/purpleSlanj.jpg"
+                                    alt="Purple Slanj Kilt">Purple Slanj
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="huntingManx">
+                                <img class="img-fluid" src="/images/kilts/huntingManx.jpg"
+                                    alt="Hunting Manx Kilt">Hunting Manx
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="huntingBuchanan">
+                                <img class="img-fluid" src="/images/kilts/huntingBuchanan.jpg"
+                                    alt="Hunting Buchanan Kilt">Hunting Buchanan
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="weatheredPatriot">
+                                <img class="img-fluid" src="/images/kilts/weatheredPatriot.jpg"
+                                    alt="Weathered Patriot Kilt">Weathered Patriot
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="holyrood">
+                                <img class="img-fluid" src="/images/kilts/holyrood.jpg" alt="Holyrood Kilt">Holyrood
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="mapleLeaf">
+                                <img class="img-fluid" src="/images/kilts/mapleLeaf.jpg" alt="Maple Leaf Kilt">Maple
+                                Leaf
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="stMirren">
+                                <img class="img-fluid" src="/images/kilts/stMirren.jpg" alt="St Mirren FC Kilt">St
+                                Mirren FC (+£10)
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="kiltOption" value="motherwell">
+                                <img class="img-fluid" src="/images/kilts/motherwell.jpg"
+                                    alt="Motherwell FC Kilt">Motherwell FC (+£10)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Jacket Style -->
+                    <div class="row text-center py-2 mb-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitJacket">
+                        <h2>Jacket</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="jacketOption" value="mossGreen">
+                                <img class="img-fluid" src="/images/jackets/mossGreen.jpg" alt="Moss Green Jacket">Moss
+                                Green
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="jacketOption" value="midnightBlue">
+                                <img class="img-fluid" src="/images/jackets/midnightBlue.jpg"
+                                    alt="Midnight Blue Jacket">Midnight Blue
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="jacketOption" value="charcoalGrey">
+                                <img class="img-fluid" src="/images/jackets/charcoalGrey.jpg"
+                                    alt="Charcoal Grey Jacket">Charcoal Grey
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="jacketOption" value="lightGrey">
+                                <img class="img-fluid" src="/images/jackets/lightGrey.jpg" alt="Light Grey Jacket">Light
+                                Grey
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="jacketOption" value="lovatBlue">
+                                <img class="img-fluid" src="/images/jackets/lovatBlue.jpg" alt="Lovat Blue Jacket">Lovat
+                                Blue
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="jacketOption" value="peatBrown">
+                                <img class="img-fluid" src="/images/jackets/peatBrown.jpg" alt="Peat Brown Jacket">Peat
+                                Brown
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Sporrans -->
+                    <div class="row text-center py-2 mb-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitSporran">
+                        <h2>Sporran</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="sporran" value="silver">
+                                <img class="img-fluid" src="/images/sporrans/silver.jpg" alt="Silver Sporran">Silver
+                                Sealskin
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="sporran" value="black">
+                                <img class="img-fluid" src="/images/sporrans/black.jpg" alt="Black Sporran">Black Bovine
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="sporran" value="brown">
+                                <img class="img-fluid" src="/images/sporrans/brown.jpg"
+                                    alt="Brown Leather Sporran">Brown Leather
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="sporran" value="copper">
+                                <img class="img-fluid" src="/images/sporrans/copper.jpg"
+                                    alt="Copper Musquash Sporran">Copper Musquash (+£30)
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="sporran" value="kids">
+                                <img class="img-fluid" src="/images/sporrans/kids.jpg"
+                                    alt="Childs Bovine Sporran">Childs Bovine
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Shoes -->
+                    <div class="row text-center py-2 mb-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitShoes">
+                        <h2>Shoes</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="shoes" value="black">
+                                <img class="img-fluid" src="/images/shoes/black.jpg" alt="Black Ghillie Brogues">Black
+                                Ghillie
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="shoes" value="brown">
+                                <img class="img-fluid" src="/images/shoes/brown.jpg" alt="Brown Day Brogues">Brown Day
+                                (+£10)
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1">
+                            <label>
+                                <input type="radio" name="shoes" value="kids">
+                                <img class="img-fluid" src="/images/shoes/black.jpg" alt="Black Ghillie Brogues">Childs
+                                Black Ghillie
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Socks -->
+                    <div class="row text-center py-2 mb-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitSocks">
+                        <h2>Socks</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="moss">
+                                <img class="img-fluid" src="/images/socks/moss.jpg" alt="Moss Green Socks">Moss Green
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="midnight">
+                                <img class="img-fluid" src="/images/socks/midnight.jpg"
+                                    alt="Midnight Blue Socks">Midnight Blue
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="charcoal">
+                                <img class="img-fluid" src="/images/socks/charcoal.jpg"
+                                    alt="Charcoal Grey Socks">Charcoal Grey
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="grey">
+                                <img class="img-fluid" src="/images/socks/grey.jpg" alt="Light Grey Socks">Light Grey
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="lovat">
+                                <img class="img-fluid" src="/images/socks/lovat.jpg" alt="Lovat Blue Socks">Lovat Blue
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="brown">
+                                <img class="img-fluid" src="/images/socks/brown.jpg" alt="Peat Brown Socks">Peat Brown
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="black">
+                                <img class="img-fluid" src="/images/socks/black.jpg" alt="Black Socks">Black
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="sockOption" value="ecru">
+                                <img class="img-fluid" src="/images/socks/ecru.jpg" alt="Cream Socks">Cream
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Flashes -->
+                    <div class="row text-center py-2 mb-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitFlashes">
+                        <h2>Flashes</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="flashes" value="match">
+                                <img class="img-fluid" src="/images/flashes/plain.jpg"
+                                    alt="Plain Coloured Flashes">Plain (to Match Tie)
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="flashes" value="tartan">
+                                <img class="img-fluid" src="/images/flashes/tartan.jpg" alt="Tartan Flashes">Tartan
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Tie -->
+                    <div class="row text-center py-2 mb-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitTies">
+                        <h2>Tie Style</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tie" value="straight">
+                                <img class="img-fluid" src="/images/ties/plain.jpg" alt="Straight Tie">Straight
+                                Tie
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tie" value="ruche">
+                                <img class="img-fluid" src="/images/ties/ruche.jpg" alt="Ruche Tie">Ruche
+                                Tie
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tie" value="bowtie">
+                                <img class="img-fluid" src="/images/ties/blackBow.jpg" alt="Black Bowtie">Bowtie
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Tie colors -->
+                    <div class="row text-center py-2 mb-3 outfitContainer border-top border-bottom border-dark"
+                        id="outfitTies">
+                        <h2>Tie Colors</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="black">
+                                <img class="img-fluid" src="/images/tie colors/black.jpg" alt="Black">Black
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="claret">
+                                <img class="img-fluid" src="/images/tie colors/claret.jpg" alt="Claret">Claret
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="green">
+                                <img class="img-fluid" src="/images/tie colors/green.jpg" alt="Bottle Green">Bottle
+                                Green
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="grey">
+                                <img class="img-fluid" src="/images/tie colors/grey.jpg" alt="Grey">Grey
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="midnight">
+                                <img class="img-fluid" src="/images/tie colors/midnight.jpg"
+                                    alt="Midnight Blue">Midnight Blue
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="pink">
+                                <img class="img-fluid" src="/images/tie colors/pink.jpg" alt="Pink">Pink
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="purple">
+                                <img class="img-fluid" src="/images/tie colors/purple.jpg" alt="Purple">Purple
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="red">
+                                <img class="img-fluid" src="/images/tie colors/red.jpg" alt="Dark Red">Dark
+                                Red
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="silver">
+                                <img class="img-fluid" src="/images/tie colors/silver.jpg" alt="Silver">Silver
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="straw">
+                                <img class="img-fluid" src="/images/tie colors/straw.jpg" alt="Straw">Straw
+                            </label>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                            <label>
+                                <input type="radio" name="tieColor" value="tartan">
+                                <img class="img-fluid" src="/images/tie colors/tartan.jpg" alt="Tartan">Tartan
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" id="extras">
+                <!-- Extras -->
+                <div class="container-fluid border border-dark shadow mb-5">
+                    <section class="row extrasContainer py-3 border-bottom border-dark">
+                        <h2 class="text-center" id="hireDetails">Extras</h2>
+                    </section>
+                    <div class="row text-center p-2 mt-3">
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <input type="checkbox" id="plaid" name="plaid" value="yes" />
+                            <label class="extrasSelector" for="plaid"><img src="/images/misc/plaid.png"
+                                    width="100%" /></label>
+                            Plaid & Brooch(+£30)
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <input type="checkbox" id="belt" name="belt" value="yes" />
+                            <label class="extrasSelector" for="belt"><img src="/images/misc/belt.png"
+                                    width="100%" /></label>
+                            Belt & Buckle(+£30)
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3 px-1 mb-3">
+                            <input type="checkbox" id="shirt" name="shirt" value="yes" />
+                            <label class="extrasSelector" for="shirt"><img src="/images/misc/rome.png"
+                                    width="100%" /></label>
+                            White Shirt(+£20)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" id="sizes">
+                <!-- Sizes -->
+                <div class="container-fluid border border-dark shadow mb-5">
+                    <div class="row sizesContainer py-3 border-bottom border-dark">
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                            <h2 class="text-center" id="hireDetails">Sizes</h2>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.youtube.com/playlist?list=PLUTCHX7yclrWDtOvrymjPPT_Ehqh3xaaE"
+                                target=”_blank” id="ytText">
+                                <h2 class="text-end">Measuring Guide <i class="fa-brands fa-youtube"
+                                        style="color: #ff0000;"></i>
+                                </h2>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <!-- Waist -->
+                        <div class="col-md-6 form-group">
+                            <h3 class="text-left mb-0 text-black">Waist Size</h3>
+                            <select class="form-select formInput border border-dark" name="waist" id="waist">
+                                <option hidden selected disabled></option>
+                                <option value="67">26" (67cm)</option>
+                                <option value="72">28" (72cm)</option>
+                                <option value="77">30" (77cm)</option>
+                                <option value="82">32" (82cm)</option>
+                                <option value="87">34" (87cm)</option>
+                                <option value="92">36" (92cm)</option>
+                                <option value="97">38" (97cm)</option>
+                                <option value="102">40" (102cm)</option>
+                                <option value="107">42" (107cm)</option>
+                                <option value="112">44" (112cm)</option>
+                                <option value="117">46" (117cm)</option>
+                                <option value="122">48" (122cm)</option>
+                                <option value="127">50" (127cm)</option>
+                                <option value="133">52" (133cm)</option>
+                                <option value="138">54" (138cm)</option>
+                                <option value="143">56" (143cm)</option>
+                            </select>
+                        </div>
+
+                        <!-- Kilt Length -->
+                        <div class=" col-md-6">
+                            <h3 class="text-left mb-0 text-black">Kilt Length</h3>
+                            <select class="form-select formInput border border-dark" name="klength" id="klength">
+                                <option hidden selected disabled></option>
+                                <option value="51">20" (51cm)</option>
+                                <option value="53">20½" (53cm)</option>
+                                <option value="54">21" (54cm)</option>
+                                <option value="55">21½" (55cm)</option>
+                                <option value="56">22" (56cm)</option>
+                                <option value="58">22½" (58cm)</option>
+                                <option value="59">23" (59cm)</option>
+                                <option value="60">23½" (60cm)</option>
+                                <option value="61">24" (61cm)</option>
+                                <option value="63">24½" (63cm)</option>
+                                <option value="64">25" (64cm)</option>
+                                <option value="65">25½" (65cm)</option>
+                                <option value="67">26" (67cm)</option>
+                                <option value="68">26½" (68cm)</option>
+                                <option value="69">27" (69cm)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row p-2">
+                        <!-- Kilt Length Table -->
+                        <div class="col pt-3 border shadow infoTable table-responsive">
+                            <table class="table table-sm table-bordered">
+                                <caption class="text-center">
+                                    Suggested Kilt Lengths for Heights.<br>If your measurement is very different from
+                                    this, please consider remeasuring or contact us at ross@slanj.com
+                                </caption>
+                                <thead class="text-center">
+                                    <tr>
+                                        <th scope="col">5'4"</th>
+                                        <th scope="col">5'5"</th>
+                                        <th scope="col">5'6"</th>
+                                        <th scope="col">5'7"</th>
+                                        <th scope="col">5'8"</th>
+                                        <th scope="col">5'9"</th>
+                                        <th scope="col">5'10"</th>
+                                        <th scope="col">5'11"</th>
+                                        <th scope="col">6'</th>
+                                        <th scope="col">6'1"</th>
+                                        <th scope="col">6'2"</th>
+                                        <th scope="col">6'3"</th>
+                                        <th scope="col">6'4"</th>
+                                        <th scope="col">6'5"</th>
+                                        <th scope="col">6'6"</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <th scope="row">20"</th>
+                                        <th scope="row">20&#189"</th>
+                                        <th scope="row">21"</th>
+                                        <th scope="row">21&#189"</th>
+                                        <th scope="row">22"</th>
+                                        <th scope="row">22&#189"</th>
+                                        <th scope="row">23"</th>
+                                        <th scope="row">23&#189"</th>
+                                        <th scope="row">24"</th>
+                                        <th scope="row">24&#189"</th>
+                                        <th scope="row">25"</th>
+                                        <th scope="row">25&#189"</th>
+                                        <th scope="row">26"</th>
+                                        <th scope="row">26&#189"</th>
+                                        <th scope="row">27"</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row p-2">
+                        <!-- Chest -->
+                        <div class="col-md-6 form-group">
+                            <h3 class="text-left mb-0 text-black">Chest Size</h3>
+                            <select class="form-select formInput border border-dark" name="chest" id="chest">
+                                <option hidden selected disabled></option>
+                                <option value="87">34" (87cm)</option>
+                                <option value="92">36" (92cm)</option>
+                                <option value="97">38" (97cm)</option>
+                                <option value="102">40" (102cm)</option>
+                                <option value="107">42" (107cm)</option>
+                                <option value="112">44" (112cm)</option>
+                                <option value="117">46" (117cm)</option>
+                                <option value="122">48" (122cm)</option>
+                                <option value="127">50" (127cm)</option>
+                                <option value="133">52" (133cm)</option>
+                                <option value="138">54" (138cm)</option>
+                                <option value="143">56" (143cm)</option>
+                                <option value="148">58" (148cm)</option>
+                                <option value="153">60" (153cm)</option>
+                                <option value="158">62" (158cm)</option>
+                            </select>
+                        </div>
+
+                        <!-- Jacket Length -->
+                        <div class=" col-md-6">
+                            <h3 class="text-left mb-0 text-black">Jacket Length</h3>
+                            <select class="form-select formInput border border-dark" name="jlength" id="jlength">
+                                <option hidden selected disabled></option>
+                                <option value="S">Short</option>
+                                <option value="R">Regular</option>
+                                <option value="L">Long</option>
+                                <option value="XL">Extra Long</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row p-2">
+                        <!-- Jacket Length Table -->
+                        <div class="col pt-3 border shadow infoTable table-responsive">
+                            <table class="table table-sm table-bordered">
+                                <caption class="text-center">
+                                    Actual Sleeve Lengths for Size.<br>If your measurement is very
+                                    different from this, we would suggest remeasuring or contact us at ross@slanj.com
+                                </caption>
+                                <!-- 34"-44" -->
+                                <thead class="text-center">
+                                    <tr>
+                                        <th scope="col" colspan="4">34</th>
+                                        <th scope="col" colspan="4">36</th>
+                                        <th scope="col" colspan="4">38</th>
+                                        <th scope="col" colspan="4">40</th>
+                                        <th scope="col" colspan="4">42</th>
+                                        <th scope="col" colspan="4">44</th>
+                                    </tr>
+                                </thead>
+                                <thead class="text-center">
+                                    <tr>
+                                        <!-- 34 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 36 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 38 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 40 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 42 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 44 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <!-- 34 -->
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row">24"</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <!-- 36 -->
+                                        <td scope="row">23&#189"</td>
+                                        <td scope="row">24&#189"</td>
+                                        <td scope="row">25&#189"</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <!-- 38 -->
+                                        <td scope="row">23&#189"</td>
+                                        <td scope="row">24&#189"</td>
+                                        <td scope="row">25&#189"</td>
+                                        <td scope="row">26&#189"</td>
+                                        <!-- 40 -->
+                                        <td scope="row">24"</td>
+                                        <td scope="row">25"</td>
+                                        <td scope="row">26"</td>
+                                        <td scope="row">27"</td>
+                                        <!-- 42 -->
+                                        <td scope="row">24"</td>
+                                        <td scope="row">25"</td>
+                                        <td scope="row">26"</td>
+                                        <td scope="row">27"</td>
+                                        <!-- 44 -->
+                                        <td scope="row">24&#189"</td>
+                                        <td scope="row">25&#189"</td>
+                                        <td scope="row">26&#189"</td>
+                                        <td scope="row">27&#189"</td>
+                                    </tr>
+                                </tbody>
+                                <tr>
+                                    <td scope="row" colspan="24" class="tBlank"></td>
+                                </tr>
+                                <!-- 46"-56" -->
+                                <thead class="text-center">
+                                    <th scope="col" colspan="4">46</th>
+                                    <th scope="col" colspan="4">48</th>
+                                    <th scope="col" colspan="4">50</th>
+                                    <th scope="col" colspan="4">52</th>
+                                    <th scope="col" colspan="4">54</th>
+                                    <th scope="col" colspan="4">56</th>
+                                </thead>
+                                <thead class="text-center">
+                                    <!-- 46 -->
+                                    <th scope="col">S</th>
+                                    <th scope="col">R</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">XL</th>
+                                    <!-- 48 -->
+                                    <th scope="col">S</th>
+                                    <th scope="col">R</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">XL</th>
+                                    <!-- 50 -->
+                                    <th scope="col">S</th>
+                                    <th scope="col">R</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">XL</th>
+                                    <!-- 52 -->
+                                    <th scope="col">S</th>
+                                    <th scope="col">R</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">XL</th>
+                                    <!-- 54 -->
+                                    <th scope="col">S</th>
+                                    <th scope="col">R</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">XL</th>
+                                    <!-- 56 -->
+                                    <th scope="col">S</th>
+                                    <th scope="col">R</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">XL</th>
+
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- 46 -->
+                                    <td scope="row">24&#189"</td>
+                                    <td scope="row">25&#189"</td>
+                                    <td scope="row">26&#189"</td>
+                                    <td scope="row">27&#189"</td>
+                                    <!-- 48 -->
+                                    <td scope="row">25"</td>
+                                    <td scope="row">26"</td>
+                                    <td scope="row">27"</td>
+                                    <td scope="row" class="tNA">-</td>
+                                    <!-- 50 -->
+                                    <td scope="row">25"</td>
+                                    <td scope="row">26"</td>
+                                    <td scope="row">27"</td>
+                                    <td scope="row" class="tNA">-</td>
+                                    <!-- 52 -->
+                                    <td scope="row" class="tNA">-</td>
+                                    <td scope="row">26.5"</td>
+                                    <td scope="row" class="tNA">-</td>
+                                    <td scope="row" class="tNA">-</td>
+                                    <!-- 54 -->
+                                    <td scope="row" class="tNA">-</td>
+                                    <td scope="row">26.5"</td>
+                                    <td scope="row" class="tNA">-</td>
+                                    <td scope="row" class="tNA">-</td>
+                                    <!-- 56 -->
+                                    <td scope="row" class="tNA">-</td>
+                                    <td scope="row">26.5"</td>
+                                    <td scope="row" class="tNA">-</td>
+                                    <td scope="row" class="tNA">-</td>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row p-2">
+                        <!-- Shoes -->
+                        <div class="col-md-6 form-group">
+                            <h3 class="text-left mb-0 text-black">Shoe Size</h3>
+                            <select class="form-select formInput border border-dark" name="shoe" id="shoe">
+                                <option hidden selected disabled></option>
+                                <option value="3">UK 3 (US 4 / EU 35½)</option>
+                                <option value="4">UK 4 (US 5 / EU 37)</option>
+                                <option value="5">UK 5 (US 6 / EU 38)</option>
+                                <option value="6">UK 6 (US 7 / EU 39)</option>
+                                <option value="6½">UK 6½ (US 7½ / EU 40)</option>
+                                <option value="7">UK 7 (US 8 / EU 40½)</option>
+                                <option value="7½">UK 7½ (US 8½ / EU 41)</option>
+                                <option value="8">UK 8 (US 9 / EU 42)</option>
+                                <option value="8½">UK 8½ (US 9½ / EU 42½)</option>
+                                <option value="9">UK 9 (US 10 / EU 43)</option>
+                                <option value="9½">UK 9½ (US 10½ / EU 44)</option>
+                                <option value="10">UK 10 (US 11 / EU 44½)</option>
+                                <option value="10½">UK 10½ (US 11½ / EU 45)</option>
+                                <option value="11">UK 11 (US 12 / EU 46)</option>
+                                <option value="11½">UK 11½ (US 12½ / EU 46½)</option>
+                                <option value="12">UK 12 (US 13 / EU 47)</option>
+                                <option value="13">UK 13 (US 14 / EU 48)</option>
+                                <option value="14">UK 14 (US 15 / EU 49½)</option>
+                            </select>
+                        </div>
+
+                        <!-- Blank -->
+                        <div class=" col-md-6">
+                        </div>
+                    </div>
+
+                    <div class="row p-2 mb-3">
+                        <!-- Shirt -->
+                        <div class="col-md-6 form-group">
+                            <h3 class="text-left mb-0 text-black">Collar Size</h3>
+                            <select class="form-select formInput border border-dark" name="collar" id="collar">
+                                <option hidden selected disabled></option>
+                                <option value="14">14" (36cm)</option>
+                                <option value="14.5">14½" (37cm)</option>
+                                <option value="15">15" (38cm)</option>
+                                <option value="15.5">15½" (39cm)</option>
+                                <option value="16">16" (41cm)</option>
+                                <option value="16.5">16½" (42cm)</option>
+                                <option value="17">17" (43cm)</option>
+                                <option value="17.5">17½" (44cm)</option>
+                                <option value="18">18" (46cm)</option>
+                                <option value="19">19" (48cm)</option>
+                                <option value="20">20" (51cm)</option>
+                            </select>
+                        </div>
+
+                        <!-- Shirt Fit -->
+                        <div class=" col-md-6">
+                            <h3 class="text-left mb-0 text-black">Shirt Fit</h3>
+                            <select class="form-select formInput border border-dark" name="sFit" id="sFit">
+                                <option hidden selected disabled></option>
+                                <option value="Regular">Regular Fit</option>
+                                <option value="Slim">Slim Fit</option>
+                                <option value="Tall">Tall Fit</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" id="submit">
+                <div class="d-grid">
+                    <button class="btn btn-secondary btn-block btn-lg mb-4 shadow">Submit Hire</button>
+                </div>
+            </div>
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row bg-light text-muted border-top">
+                <div class="col-6 mt-2">
+                    <p>&copy Ross Lyall 2024</p>
+                </div>
+                <div class="col-6 mt-2" id="footerEmail">
+                    <p>For all enquiries - please contact <i class="fa-regular fa-envelope"></i>
+                        ross@slanj.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d2012d6523.js" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/d2012d6523.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
