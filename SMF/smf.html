@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slanj SMF Solo Hire</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="smf.css">
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar bg-secondary-subtle navbar-expand-lg sticky-top border-bottom">
+        <div class=" container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/logos/NewSlanjLogoGrey.svg" alt="Slanj Kilts Logo" width="80">
+            </a>
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Outfits</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="/pricing/pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Hire Any Tartan</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="/outfitChoice.html">Self-Measurement</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Discounts</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="/faqs/faqs.html">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="headerImage container-fluid d-flex justify-content-center align-items-center">
+        <div class="text-block shadow">
+            <h1>SOLO HIRE</h1>
+            <h2>Click on the outfit images to select item</h2>
+            <h2>Use the menu options above to jump to specific sections</h2>
+            <button type="button" class="btn btn-outline-light btn-lg">Get Started</button>
+        </div>
+    </header>
+
+
+    <!-- Initial Popup -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header fs-4">
+                    <h5 class="modal-title">Age Range</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body fs-5">
+                    The default option of "Adult Hire" has been selected. If the person you are submitting measurements
+                    for is under 14, please select their age in the <i>Age</i> area of the Customer Details.
+                    <br><br>
+                    If you change the age range at any point during outfit selection, all choices will be reset.
+                    <br><br>
+                    Please be aware that not all options are available for children.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lets Go</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <form action="/submit">
+
+        <div class="container-fluid">
+
+            <!-- Small Menu -->
+            <div class="container-fluid px-0 mx-2 mt-3 smallMenu">
+                <div class="row d-md-none">
+                    <div class="btn-group">
+                        <button type="button" class="bg-white btn btn-outline-secondary mb-1"><a class="topMenu"
+                                href="#custDetails">Customer</a></button>
+                        <button type="button" class="bg-white btn btn-outline-secondary mb-1"><a class="topMenu"
+                                href="#hireDetails">Hire</a></button>
+                        <button type="button" class="bg-white btn btn-outline-secondary mb-1"><a class="topMenu"
+                                href="#outfitKilt">Outfit</a></button>
+                        <button type="button" class="bg-white btn btn-outline-secondary mb-1"><a class="topMenu"
+                                href="#extras">Extras</a></button>
+                        <button type="button" class="bg-white btn btn-outline-secondary mb-1"><a class="topMenu"
+                                href="#sizes">Measurements</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-0">
+                <div class="col-md-9 col-lg-10 px-3 border-end">
+
+                    <!-- Customer Details -->
+                    <div class="container bg-secondary-subtle my-3 border border-secondary-subtle shadow fs-5">
+                        <section class="row bg-light" id="custDetails">
+                            <p class="mb-0 py-2 text-center fs-1">Customer Details</p>
+                        </section>
+                        <div class="row px-3 py-1 mt-3">
+                            <!-- First name -->
+                            <div class="col-md-6">
+                                <p class="text-left mb-0 text-black">First Name</p>
+                                <input type="text" name="firstName" class="form-control formInput border border-dark"
+                                    required>
+                            </div>
+                            <!-- Last name -->
+                            <div class=" col-md-6">
+                                <p class="text-left mb-0 text-black">Last Name</p>
+                                <input type="text" name="lastName" class="form-control formInput border border-dark"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="row px-3 py-1">
+                            <!-- Phone -->
+                            <div class="col-md-6">
+                                <p class="text-left mb-0 text-black">Phone Number</p>
+                                <input type="tel" name="phone" class="form-control formInput border border-dark"
+                                    autocomplete="tel">
+                            </div>
+                            <!-- Email -->
+                            <div class=" col-md-6">
+                                <p class="text-left mb-0 text-black">Email Address</p>
+                                <input type="email" name="email" class="form-control formInput border border-dark"
+                                    autocomplete="email">
+                            </div>
+                        </div>
+
+                        <div class="row px-3 py-1">
+                            <!-- Age -->
+                            <div class="col-md-6  mb-3 form-group">
+                                <p class="text-left mb-0 text-black">Age</p>
+                                <select class="form-select formInput border border-dark" name="ageRange" id="ageRange"
+                                    required>
+                                    <option value="6mo">6 months</option>
+                                    <option value="12mo">12 months</option>
+                                    <option value="18mo">18 months</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="adult" selected>Adult (14+)</option>
+                                </select>
+                            </div>
+                            <!-- Height -->
+                            <div class="col-md-6 mb-3 form-group">
+                                <p class="text-left mb-0 text-black" id="height">Height</p>
+                                <select class="form-select formInput border border-dark" name="height" id="height"
+                                    required>
+                                    <option hidden selected disabled></option>
+                                    <option value="153">5'0" (153cm)</option>
+                                    <option value="155">5'1" (155cm)</option>
+                                    <option value="158">5'2" (158cm)</option>
+                                    <option value="161">5'3" (161cm)</option>
+                                    <option value="163">5'4" (163cm)</option>
+                                    <option value="166">5'5" (166cm)</option>
+                                    <option value="168">5'6" (168cm)</option>
+                                    <option value="171">5'7" (171cm)</option>
+                                    <option value="173">5'8" (173cm)</option>
+                                    <option value="176">5'9" (176cm)</option>
+                                    <option value="178">5'10" (178cm)</option>
+                                    <option value="181">5'11" (181cm)</option>
+                                    <option value="183">6'0" (183cm)</option>
+                                    <option value="186">6'1" (186cm)</option>
+                                    <option value="188">6'2" (188cm)</option>
+                                    <option value="191">6'3" (191cm)</option>
+                                    <option value="194">6'4" (194cm)</option>
+                                    <option value="196">6'5" (196cm)</option>
+                                    <option value="199">6'6" (199cm)</option>
+                                    <option value="201">6'7" (201cm)</option>
+                                    <option value="204">6'8" (204cm)</option>
+                                    <option value="206">6'9" (206cm)</option>
+                                    <option value="209">6'10" (209cm)</option>
+                                    <option value="211">6'11" (211cm)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Party Details -->
+                    <div class="container bg-secondary-subtle mb-3 border border-secondary-subtle shadow fs-5">
+                        <section class="row bg-light" id="partyDetails">
+                            <p class="mb-0 py-2 text-center fs-1">Party Details</p>
+                        </section>
+                        <div class="row px-3 py-1 mt-3">
+                            <!-- Party name -->
+                            <div class="col-md-6 mb-3">
+                                <p class="text-left mb-0 text-black">Party Name</p>
+                                <input type="text" name="partyName" class="form-control formInput border border-dark"
+                                    required>
+                            </div>
+                            <!-- Function name -->
+                            <div class="col-md-6 mb-3">
+                                <p class="text-left mb-0 text-black">Function Date</p>
+                                <input type="date" name="partydate" class="form-control formInput border border-dark"
+                                    required>
+                            </div>
+                            <p class="text-center my-2 text-black">The Party Name will have been supplied to you
+                                by the party organiser. For wedding parties it is normally the grooms<br>If you have any
+                                specific requirements please add this
+                                information in the <i>Additional Information</i> section below.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hire Details -->
+                    <div class="container bg-secondary-subtle mb-3 border border-secondary-subtle shadow fs-5">
+                        <section class="row bg-light" id="hireDetails">
+                            <p class="mb-0 py-2 text-center fs-1">Hire Details</p>
+                        </section>
+                        <!-- Collection date -->
+                        <div class="row px-3 py-1 mt-3">
+                            <div class="col-md-4">
+                                <p class="text-left mb-0 text-black">Collection Date</p>
+                                <input type="date" name="colDate" class="form-control formInput border border-dark">
+                            </div>
+                            <!-- Function date -->
+                            <div class=" col-md-4">
+                                <p class="text-left mb-0 text-black">Function Date</p>
+                                <input type="date" name="funcDate" class="form-control formInput border border-dark">
+                            </div>
+                            <!-- Return date -->
+                            <div class=" col-md-4">
+                                <p class="text-left mb-0 text-black">Return Date</p>
+                                <input type="date" name="retDate" class="form-control formInput border border-dark">
+                            </div>
+                        </div>
+                        <!-- Collection Branch -->
+                        <div class="row px-3 py-1">
+                            <div class="col-md-6 form-group">
+                                <p class="text-left mb-0 text-black">Collection Branch</p>
+                                <select class="form-select formInput border border-dark" name="colBranch" id="colBranch"
+                                    required>
+                                    <option hidden selected disabled></option>
+                                    <option value="duke">604 Duke Street, Glasgow, G31 1JX</option>
+                                    <option value="stenoch">30 St Enoch Square, Glasgow, G1 4DB</option>
+                                </select>
+                                <p class="text-center my-2 text-black fs-6">We advise collecting
+                                    your outfit from Duke Street.<br>If incorrect sizes are
+                                    submitted, we have more stock at this location.</p>
+                            </div>
+                            <!-- Return Branch -->
+                            <div class="col-md-6 form-group">
+                                <p class="text-left mb-0 text-black">Return Branch</p>
+                                <select class="form-select formInput border border-dark" name="retBranch" id="retBranch"
+                                    required>
+                                    <option hidden selected disabled></option>
+                                    <option value="duke">604 Duke Street, Glasgow, G31 1JX</option>
+                                    <option value="stenoch">30 St Enoch Square, Glasgow, G1 4DB</option>
+                                </select>
+                                <p class=" text-center my-2 text-black fs-6">You can return your outfits to either
+                                    branch.<br>However, please be aware that Duke Street is closed on a Sunday.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outfit Details -->
+                    <div class="container bg-secondary-subtle mb-3 border border-secondary-subtle shadow fs-5">
+                        <!-- Header -->
+                        <section class="row bg-light mb-3" id="outfitDetails">
+                            <p class="mb-0 py-2 text-center fs-1">Outfit Details</p>
+                        </section>
+
+                        <!-- Kilt Details -->
+                        <div class="container bg-light shadow mb-3" id="outfitKilt">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i>
+                                    Kilts</p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="isleofskye">
+                                        <img class="img-fluid" src="/images/kilts/IOS.png" alt="Isle of Skye Kilt">Isle
+                                        Of Skye
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="ancientPatriot">
+                                        <img class="img-fluid" src="/images/kilts/AP.png"
+                                            alt="Ancient Patriot Kilt">Ancient
+                                        Patriot
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="greySlanj">
+                                        <img class="img-fluid" src="/images/kilts/GS.png" alt="Grey Slanj Kilt">Grey
+                                        Slanj
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="spiritOfGlasgow">
+                                        <img class="img-fluid" src="/images/kilts/SOG.png"
+                                            alt="Spirit of Glasgow Kilt">Spirit
+                                        of Glasgow
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="purpleSlanj">
+                                        <img class="img-fluid" src="/images/kilts/PS.png" alt="Purple Slanj Kilt">Purple
+                                        Slanj
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="huntingManx">
+                                        <img class="img-fluid" src="/images/kilts/HM.png"
+                                            alt="Hunting Manx Kilt">Hunting
+                                        Manx
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="huntingBuchanan">
+                                        <img class="img-fluid" src="/images/kilts/HB.png"
+                                            alt="Hunting Buchanan Kilt">Hunting
+                                        Buchanan
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="weatheredPatriot">
+                                        <img class="img-fluid" src="/images/kilts/WP.png"
+                                            alt="Weathered Patriot Kilt">Weathered
+                                        Patriot
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="holyrood">
+                                        <img class="img-fluid" src="/images/kilts/HR.png" alt="Holyrood Kilt">Holyrood
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="mapleLeaf">
+                                        <img class="img-fluid" src="/images/kilts/ML.png" alt="Maple Leaf Kilt">Maple
+                                        Leaf
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="stMirren">
+                                        <img class="img-fluid" src="/images/kilts/STM.png" alt="St Mirren FC Kilt">St
+                                        Mirren FC (+£10)
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="kiltOption" value="motherwell">
+                                        <img class="img-fluid" src="/images/kilts/MW.png"
+                                            alt="Motherwell FC Kilt">Motherwell FC
+                                        (+£10)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jacket Style -->
+                        <div class="container bg-light shadow mb-3" id="outfitJacket">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i> Jackets
+                                </p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="jacketOption" value="mossGreen">
+                                        <img class="img-fluid" src="/images/jackets/MG.png" alt="Moss Green Jacket">Moss
+                                        Green
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="jacketOption" value="midnightBlue">
+                                        <img class="img-fluid" src="/images/jackets/MB.png"
+                                            alt="Midnight Blue Jacket">Midnight
+                                        Blue
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="jacketOption" value="charcoalGrey">
+                                        <img class="img-fluid" src="/images/jackets/CC.png"
+                                            alt="Charcoal Grey Jacket">Charcoal
+                                        Grey
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="jacketOption" value="lightGrey">
+                                        <img class="img-fluid" src="/images/jackets/LG.png" alt="Light Grey Jacket"
+                                            class="adultOnly">Light
+                                        Grey
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="jacketOption" value="lovatBlue">
+                                        <img class="img-fluid" src="/images/jackets/LB.png" alt="Lovat Blue Jacket"
+                                            class="adultOnly">Lovat
+                                        Blue
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="jacketOption" value="peatBrown">
+                                        <img class="img-fluid" src="/images/jackets/PB.png" alt="Peat Brown Jacket"
+                                            class="adultOnly">Peat
+                                        Brown
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sporrans -->
+                        <div class="container bg-light shadow mb-3" id="outfitSporran">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i>
+                                    Sporrans</p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="sporranOption" value="silver">
+                                        <img class="img-fluid" src="/images/sporrans/silver.jpg" alt="Silver Sporran"
+                                            class="adultOnly" class="">Silver
+                                        Sealskin
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="sporranOption" value="black">
+                                        <img class="img-fluid" src="/images/sporrans/black.jpg" alt="Black Sporran"
+                                            class="adultOnly" class="">Black
+                                        Bovine
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="sporranOption" value="brown">
+                                        <img class="img-fluid" src="/images/sporrans/brown.jpg"
+                                            alt="Brown Leather Sporran" class="adultOnly" class="">Brown
+                                        Leather
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="sporranOption" value="copper">
+                                        <img class="img-fluid" src="/images/sporrans/copper.jpg"
+                                            alt="Copper Musquash Sporran" class="adultOnly" class="">Copper (+£30)
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="sporranOption" value="kids">
+                                        <img class="img-fluid" src="/images/sporrans/kids.jpg"
+                                            alt="Childs Bovine Sporran">Childs
+                                        Bovine
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shoes -->
+                        <div class="container bg-light shadow mb-3" id="outfitShoes">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i> Shoes
+                                </p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="shoesOption" value="black">
+                                        <img class="img-fluid" src="/images/shoes/black.jpg" alt="Black Ghillie Brogues"
+                                            class="adultOnly">Black
+                                        Ghillie
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="shoesOption" value="brown">
+                                        <img class="img-fluid" src="/images/shoes/brown.jpg" alt="Brown Day Brogues"
+                                            class="adultOnly">Brown
+                                        Day
+                                        (+£10)
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="shoesOption" value="kids">
+                                        <img class="img-fluid" src="/images/shoes/black.jpg"
+                                            alt="Black Ghillie Brogues">Childs
+                                        Black Ghillie
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Socks -->
+                        <div class="container bg-light shadow mb-3" id="outfitSocks">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i> Socks
+                                </p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="socksOption" value="moss">
+                                        <img class="img-fluid" src="/images/socks/moss.jpg" alt="Moss Green Socks">Moss
+                                        Green
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="socksOption" value="midnight">
+                                        <img class="img-fluid" src="/images/socks/midnight.jpg"
+                                            alt="Midnight Blue Socks">Midnight
+                                        Blue
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="socksOption" value="charcoal">
+                                        <img class="img-fluid" src="/images/socks/charcoal.jpg"
+                                            alt="Charcoal Grey Socks">Charcoal
+                                        Grey
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="socksOption" value="grey">
+                                        <img class="img-fluid" src="/images/socks/grey.jpg" alt="Light Grey Socks"
+                                            class="adultOnly">Light
+                                        Grey
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="socksOption" value="lovat">
+                                        <img class="img-fluid" src="/images/socks/lovat.jpg" alt="Lovat Blue Socks"
+                                            class="adultOnly">Lovat
+                                        Blue
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="socksOption" value="brown">
+                                        <img class="img-fluid" src="/images/socks/brown.jpg" alt="Peat Brown Socks"
+                                            class="adultOnly">Peat
+                                        Brown
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="socksOption" value="black">
+                                        <img class="img-fluid" src="/images/socks/black.jpg" alt="Black Socks">Black
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="socksOption" value="ecru">
+                                        <img class="img-fluid" src="/images/socks/ecru.jpg" alt="Cream Socks">Cream
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flashes -->
+                        <div class="container bg-light shadow mb-3" id="outfitFlashes">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i> Flashes
+                                </p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="flashesOption" value="match">
+                                        <img class="img-fluid" src="/images/flashes/plain.jpg"
+                                            alt="Plain Coloured Flashes">Plain
+                                        (to Match Tie)
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label class="adultOnly">
+                                        <input type="radio" name="flashesOption" value="tartan">
+                                        <img class="img-fluid" src="/images/flashes/tartan.jpg" alt="Tartan Flashes"
+                                            class="adultOnly">Tartan
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tie -->
+                        <div class="container bg-light shadow mb-3" id="outfitTies">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i> Tie
+                                    Style</p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="tieOption" value="straight" id="straightTie">
+                                        <img class="img-fluid" src="/images/ties/plain.jpg" alt="Straight Tie">Straight
+                                        Tie
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="tieOption" value="ruche" id="rucheTie">
+                                        <img class="img-fluid" src="/images/ties/ruche.jpg" alt="Ruche Tie">Ruche
+                                        Tie
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <label>
+                                        <input type="radio" name="tieOption" value="bowtie" id="bowtie">
+                                        <img class="img-fluid" src="/images/ties/blackBow.jpg" alt="Black Bowtie">Bowtie
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tie colors -->
+                        <div class="container bg-light shadow mb-3">
+                            <div class="row py-2 px-3 fs-3 bg-body-secondary">
+                                <p class="mb-0"><i class="fa-solid fa-person-dress" style="color: #214687;"></i> Tie
+                                    Colors</p>
+                            </div>
+                            <div class="row text-center mx-0 pt-3">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColorsBlack">
+                                        <input type="radio" name="tieColor" value="black">
+                                        <img class="img-fluid" src="/images/tie colors/black.png" alt="Black">Black
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="claret">
+                                        <img class="img-fluid" src="/images/tie colors/claret.png" alt="Claret"">Claret
+                        </label>
+                    </div>
+                    <div class=" col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                        <label id="outfitTieColors">
+                                            <input type="radio" name="tieColor" value="green">
+                                            <img class="img-fluid" src="/images/tie colors/green.png"
+                                                alt="Bottle Green">Bottle
+                                            Green
+                                        </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="grey">
+                                        <img class="img-fluid" src="/images/tie colors/grey.png" alt="Grey">Grey
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="midnight">
+                                        <img class="img-fluid" src="/images/tie colors/midnight.png"
+                                            alt="Midnight Blue">Midnight
+                                        Blue
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="pink">
+                                        <img class="img-fluid" src="/images/tie colors/pink.png" alt="Pink">Pink
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="purple">
+                                        <img class="img-fluid" src="/images/tie colors/purple.png" alt="Purple">Purple
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="red">
+                                        <img class="img-fluid" src="/images/tie colors/red.png" alt="Dark Red">Dark
+                                        Red
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="silver">
+                                        <img class="img-fluid" src="/images/tie colors/silver.png" alt="Silver">Silver
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="outfitTieColors">
+                                        <input type="radio" name="tieColor" value="straw">
+                                        <img class="img-fluid" src="/images/tie colors/straw.png" alt="Straw">Straw
+                                    </label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1 mb-3">
+                                    <label id="tartanTie">
+                                        <input type="radio" name="tieColor" value="tartan">
+                                        <img class="img-fluid" src="/images/tie colors/tartan.png" alt="Tartan">Tartan
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Extras -->
+                    <div class="container bg-secondary-subtle mb-5 border border-secondary-subtle shadow fs-5"
+                        id="extras">
+                        <!-- Header -->
+                        <section class="row bg-light mb-3" id="outfitDetails">
+                            <p class="mb-0 py-2 text-center fs-1">Extras</p>
+                        </section>
+
+                        <div class="container bg-light shadow mb-3 pt-3">
+
+                            <div class="row text-center mx-0">
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <input type="checkbox" id="plaid" name="plaidOption" value="yes"
+                                        class="adultOnly extrasSelector">
+                                    <label for="plaid"><img src="/images/misc/plaid.png" width="100%"
+                                            class="adultOnly extrasImages mb-2">Plaid &
+                                        Brooch(+£30)</label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <input type="checkbox" id="belt" name="beltOption" value="yes"
+                                        class="adultOnly extrasSelector">
+                                    <label for="belt"><img src="/images/misc/belt.png" width="100%"
+                                            class="adultOnly extrasImages mb-2">Belt
+                                        &
+                                        Buckle(+£30)</label>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-xl-2 mb-3 px-1">
+                                    <input type="checkbox" id="shirt" name="shirtOption" class="extrasSelector"
+                                        value="yes" />
+                                    <label for="shirt"><img src="/images/misc/rome.png" width="100%"
+                                            class="extrasImages mb-2">White
+                                        Shirt(+£20)</label>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sizes -->
+                    <div class="container bg-secondary-subtle mb-5 border border-secondary-subtle shadow-lg fs-5"
+                        id="sizes">
+                        <!-- Header -->
+                        <section class="row bg-light mb-3">
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <p class="mb-0 py-2 text-center fs-1" id="hireDetails">Sizes</p>
+                            </div>
+                            <div class="col-4 d-flex justify-content-end align-items-center">
+                                <a href="https://www.youtube.com/playlist?list=PLUTCHX7yclrWDtOvrymjPPT_Ehqh3xaaE"
+                                    target=”_blank” id="ytText">
+                                    <p class="text-end m-0 fs-4">Measuring Guide <i class="fa-brands fa-youtube"
+                                            style="color: #ff0000;"></i>
+                                    </p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="row p-2 mt-3">
+                            <!-- Waist -->
+                            <div class="col-md-6 form-group">
+                                <h4 class="text-left mb-0 text-black">Waist Size</h4>
+                                <select class="form-select formInput border border-dark" name="waist" id="waist">
+                                    <option hidden selected disabled></option>
+                                    <option value="41" class="childSizes hideSizes">16" (41cm)</option>
+                                    <option value="46" class="childSizes hideSizes">18" (46cm)</option>
+                                    <option value="51" class="childSizes hideSizes">20" (51cm)</option>
+                                    <option value="56" class="childSizes hideSizes">22" (56cm)</option>
+                                    <option value="61" class="childSizes hideSizes">24" (61cm)</option>
+                                    <option value="67" class="childSizes hideSizes">26" (67cm)</option>
+                                    <option value="72">28" (72cm)</option>
+                                    <option value="77">30" (77cm)</option>
+                                    <option value="82" class="adultSizes">32" (82cm)</option>
+                                    <option value="87" class="adultSizes">34" (87cm)</option>
+                                    <option value="92" class="adultSizes">36" (92cm)</option>
+                                    <option value="97" class="adultSizes">38" (97cm)</option>
+                                    <option value="102" class="adultSizes">40" (102cm)</option>
+                                    <option value="107" class="adultSizes">42" (107cm)</option>
+                                    <option value="112" class="adultSizes">44" (112cm)</option>
+                                    <option value="117" class="adultSizes">46" (117cm)</option>
+                                    <option value="122" class="adultSizes">48" (122cm)</option>
+                                    <option value="127" class="adultSizes">50" (127cm)</option>
+                                    <option value="133" class="adultSizes">52" (133cm)</option>
+                                    <option value="138" class="adultSizes">54" (138cm)</option>
+                                    <option value="143" class="adultSizes">56" (143cm)</option>
+                                </select>
+                            </div>
+
+                            <!-- Kilt Length -->
+                            <div class=" col-md-6">
+                                <h4 class="text-left mb-0 text-black">Kilt Length</h4>
+                                <select class="form-select formInput border border-dark" name="klength" id="klength">
+                                    <option hidden selected disabled></option>
+                                    <option value="21" class="childSizes hideSizes">8" (21cm)</option>
+                                    <option value="23" class="childSizes hideSizes">9" (23cm)</option>
+                                    <option value="26" class="childSizes hideSizes">10" (26cm)</option>
+                                    <option value="28" class="childSizes hideSizes">11" (28cm)</option>
+                                    <option value="31" class="childSizes hideSizes">12" (31cm)</option>
+                                    <option value="34" class="childSizes hideSizes">13" (34cm)</option>
+                                    <option value="36" class="childSizes hideSizes">14" (36cm)</option>
+                                    <option value="39" class="childSizes hideSizes">15" (39cm)</option>
+                                    <option value="41" class="childSizes hideSizes">16" (41cm)</option>
+                                    <option value="44" class="childSizes hideSizes">17" (44cm)</option>
+                                    <option value="46" class="childSizes hideSizes">18" (46cm)</option>
+                                    <option value="49" class="childSizes hideSizes">19" (49cm)</option>
+                                    <option value="51">20" (51cm)</option>
+                                    <option value="53">20½" (53cm)</option>
+                                    <option value="54">21" (54cm)</option>
+                                    <option value="55">21½" (55cm)</option>
+                                    <option value="56">22" (56cm)</option>
+                                    <option value="58">22½" (58cm)</option>
+                                    <option value="59" class="adultSizes">23" (59cm)</option>
+                                    <option value="60" class="adultSizes">23½" (60cm)</option>
+                                    <option value="61" class="adultSizes">24" (61cm)</option>
+                                    <option value="63" class="adultSizes">24½" (63cm)</option>
+                                    <option value="64" class="adultSizes">25" (64cm)</option>
+                                    <option value="65" class="adultSizes">25½" (65cm)</option>
+                                    <option value="67" class="adultSizes">26" (67cm)</option>
+                                    <option value="68" class="adultSizes">26½" (68cm)</option>
+                                    <option value="69" class="adultSizes">27" (69cm)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row p-2 mx-0">
+                            <!-- Adult Kilt Length Table -->
+                            <div class="col pt-3 border shadow bg-light table-responsive adultTable">
+                                <table class="table table-sm table-bordered">
+                                    <caption class="text-center">
+                                        Suggested Kilt Lengths for Heights.<br>If your measurement is very
+                                        different
+                                        from
+                                        this, please consider remeasuring or contact us at ross@slanj.com
+                                    </caption>
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th scope="col">5'4"</th>
+                                            <th scope="col">5'5"</th>
+                                            <th scope="col">5'6"</th>
+                                            <th scope="col">5'7"</th>
+                                            <th scope="col">5'8"</th>
+                                            <th scope="col">5'9"</th>
+                                            <th scope="col">5'10"</th>
+                                            <th scope="col">5'11"</th>
+                                            <th scope="col">6'</th>
+                                            <th scope="col">6'1"</th>
+                                            <th scope="col">6'2"</th>
+                                            <th scope="col">6'3"</th>
+                                            <th scope="col">6'4"</th>
+                                            <th scope="col">6'5"</th>
+                                            <th scope="col">6'6"</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td scope="row">20"</td>
+                                            <td scope="row">20&#189"</td>
+                                            <td scope="row">21"</td>
+                                            <td scope="row">21&#189"</td>
+                                            <td scope="row">22"</td>
+                                            <td scope="row">22&#189"</td>
+                                            <td scope="row">23"</td>
+                                            <td scope="row">23&#189"</td>
+                                            <td scope="row">24"</td>
+                                            <td scope="row">24&#189"</td>
+                                            <td scope="row">25"</td>
+                                            <td scope="row">25&#189"</td>
+                                            <td scope="row">26"</td>
+                                            <td scope="row">26&#189"</td>
+                                            <td scope="row">27"</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row p-2 mx-0">
+                            <!-- Kids Kilt Length Table -->
+                            <div class="col pt-3 border shadow bg-light table-responsive hideTable childTable">
+                                <table class="table table-sm table-bordered">
+                                    <caption class="text-center">
+                                        Suggested Kilt Lengths for Childrens Ages.The two sizes quoted for each age
+                                        are the
+                                        approximate min and max kilt lengths for that age.<br>Please be aware that
+                                        these
+                                        sizes
+                                        are just
+                                        a suggestion based on previous customers bookings. We always suggest
+                                        bringing
+                                        children
+                                        in to get measured.
+                                    </caption>
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th scope="col" colspan="2">1</th>
+                                            <th scope="col" colspan="2">2</th>
+                                            <th scope="col" colspan="2">3</th>
+                                            <th scope="col" colspan="2">4</th>
+                                            <th scope="col" colspan="2">5</th>
+                                            <th scope="col" colspan="2">6</th>
+                                            <th scope="col" colspan="2">7</th>
+                                            <th scope="col" colspan="2">8</th>
+                                            <th scope="col" colspan="2">9</th>
+                                            <th scope="col" colspan="2">10</th>
+                                            <th scope="col" colspan="2">11</th>
+                                            <th scope="col" colspan="2">12</th>
+                                            <th scope="col" colspan="2">13</th>
+                                        </tr>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td scope="row">8"</td>
+                                            <td scope="row">10"</td>
+                                            <td scope="row">10"</td>
+                                            <td scope="row">12"</td>
+                                            <td scope="row">12"</td>
+                                            <td scope="row">14"</td>
+                                            <td scope="row">13"</td>
+                                            <td scope="row">15"</td>
+                                            <td scope="row">14"</td>
+                                            <td scope="row">16"</td>
+                                            <td scope="row">15"</td>
+                                            <td scope="row">17"</td>
+                                            <td scope="row">16"</td>
+                                            <td scope="row">18"</td>
+                                            <td scope="row">17"</td>
+                                            <td scope="row">19"</td>
+                                            <td scope="row">18"</td>
+                                            <td scope="row">20"</td>
+                                            <td scope="row">18"</td>
+                                            <td scope="row">21"</td>
+                                            <td scope="row">18"</td>
+                                            <td scope="row">21"</td>
+                                            <td scope="row">18"</td>
+                                            <td scope="row">21"</td>
+                                            <td scope="row">19"</td>
+                                            <td scope="row">22"</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row p-2">
+                            <!-- Chest Sizes -->
+                            <div class="col-md-6 form-group">
+                                <h4 class="text-left mb-0 text-black">Chest Size</h4>
+                                <select class="form-select formInput border border-dark" name="chest" id="chest">
+                                    <option hidden selected disabled></option>
+                                    <option value="46" class="childSizes hideSizes">18" (46cm)</option>
+                                    <option value="51" class="childSizes hideSizes">20" (51cm)</option>
+                                    <option value="56" class="childSizes hideSizes">22" (56cm)</option>
+                                    <option value="61" class="childSizes hideSizes">24" (61cm)</option>
+                                    <option value="67" class="childSizes hideSizes">26" (67cm)</option>
+                                    <option value="72" class="childSizes hideSizes">28" (72cm)</option>
+                                    <option value="77" class="childSizes hideSizes">30" (77cm)</option>
+                                    <option value="82">32" (82cm)</option>
+                                    <option value="87">34" (87cm)</option>
+                                    <option value="92">36" (92cm)</option>
+                                    <option value="97" class="adultSizes">38" (97cm)</option>
+                                    <option value="102" class="adultSizes">40" (102cm)</option>
+                                    <option value="107" class="adultSizes">42" (107cm)</option>
+                                    <option value="112" class="adultSizes">44" (112cm)</option>
+                                    <option value="117" class="adultSizes">46" (117cm)</option>
+                                    <option value="122" class="adultSizes">48" (122cm)</option>
+                                    <option value="127" class="adultSizes">50" (127cm)</option>
+                                    <option value="133" class="adultSizes">52" (133cm)</option>
+                                    <option value="138" class="adultSizes">54" (138cm)</option>
+                                    <option value="143" class="adultSizes">56" (143cm)</option>
+                                    <option value="148" class="adultSizes">58" (148cm)</option>
+                                    <option value="153" class="adultSizes">60" (153cm)</option>
+                                    <option value="158" class="adultSizes">62" (158cm)</option>
+                                </select>
+                            </div>
+
+                            <!-- Jacket Length -->
+                            <div class=" col-md-6">
+                                <h4 class="text-left mb-0 text-black">Jacket Length</h4>
+                                <select class="form-select formInput border border-dark" name="jlength" id="jlength">
+                                    <option hidden selected disabled></option>
+                                    <option value="S" class="adultSizes">Short</option>
+                                    <option value="R">Regular</option>
+                                    <option value="L" class="adultSizes">Long</option>
+                                    <option value="XL" class="adultSizes">Extra Long</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row p-2 mx-0">
+                            <!--  Adult Jacket Length Table -->
+                            <div class="col pt-3 border shadow bg-light table-responsive adultTable">
+                                <table class="table table-sm table-bordered">
+                                    <caption class="text-center">
+                                        Actual Sleeve Lengths for Size.<br>If your measurement is very
+                                        different from this, we would suggest remeasuring or contact us at
+                                        ross@slanj.com
+                                    </caption>
+                                    <!-- 34"-44" -->
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th scope="col" colspan="4">34</th>
+                                            <th scope="col" colspan="4">36</th>
+                                            <th scope="col" colspan="4">38</th>
+                                            <th scope="col" colspan="4">40</th>
+                                            <th scope="col" colspan="4">42</th>
+                                            <th scope="col" colspan="4">44</th>
+                                        </tr>
+                                    </thead>
+                                    <thead class="text-center">
+                                        <tr>
+                                            <!-- 34 -->
+                                            <th scope="col">S</th>
+                                            <th scope="col">R</th>
+                                            <th scope="col">L</th>
+                                            <th scope="col">XL</th>
+                                            <!-- 36 -->
+                                            <th scope="col">S</th>
+                                            <th scope="col">R</th>
+                                            <th scope="col">L</th>
+                                            <th scope="col">XL</th>
+                                            <!-- 38 -->
+                                            <th scope="col">S</th>
+                                            <th scope="col">R</th>
+                                            <th scope="col">L</th>
+                                            <th scope="col">XL</th>
+                                            <!-- 40 -->
+                                            <th scope="col">S</th>
+                                            <th scope="col">R</th>
+                                            <th scope="col">L</th>
+                                            <th scope="col">XL</th>
+                                            <!-- 42 -->
+                                            <th scope="col">S</th>
+                                            <th scope="col">R</th>
+                                            <th scope="col">L</th>
+                                            <th scope="col">XL</th>
+                                            <!-- 44 -->
+                                            <th scope="col">S</th>
+                                            <th scope="col">R</th>
+                                            <th scope="col">L</th>
+                                            <th scope="col">XL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <!-- 34 -->
+                                            <td scope="row" class="tNA">-</td>
+                                            <td scope="row">24"</td>
+                                            <td scope="row" class="tNA">-</td>
+                                            <td scope="row" class="tNA">-</td>
+                                            <!-- 36 -->
+                                            <td scope="row">23&#189"</td>
+                                            <td scope="row">24&#189"</td>
+                                            <td scope="row">25&#189"</td>
+                                            <td scope="row" class="tNA">-</td>
+                                            <!-- 38 -->
+                                            <td scope="row">23&#189"</td>
+                                            <td scope="row">24&#189"</td>
+                                            <td scope="row">25&#189"</td>
+                                            <td scope="row">26&#189"</td>
+                                            <!-- 40 -->
+                                            <td scope="row">24"</td>
+                                            <td scope="row">25"</td>
+                                            <td scope="row">26"</td>
+                                            <td scope="row">27"</td>
+                                            <!-- 42 -->
+                                            <td scope="row">24"</td>
+                                            <td scope="row">25"</td>
+                                            <td scope="row">26"</td>
+                                            <td scope="row">27"</td>
+                                            <!-- 44 -->
+                                            <td scope="row">24&#189"</td>
+                                            <td scope="row">25&#189"</td>
+                                            <td scope="row">26&#189"</td>
+                                            <td scope="row">27&#189"</td>
+                                        </tr>
+                                    </tbody>
+                                    <tr>
+                                        <td scope="row" colspan="24" class="tBlank"></td>
+                                    </tr>
+                                    <!-- 46"-56" -->
+                                    <thead class="text-center">
+                                        <th scope="col" colspan="4">46</th>
+                                        <th scope="col" colspan="4">48</th>
+                                        <th scope="col" colspan="4">50</th>
+                                        <th scope="col" colspan="4">52</th>
+                                        <th scope="col" colspan="4">54</th>
+                                        <th scope="col" colspan="4">56</th>
+                                    </thead>
+                                    <thead class="text-center">
+                                        <!-- 46 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 48 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 50 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 52 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 54 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <!-- 56 -->
+                                        <th scope="col">S</th>
+                                        <th scope="col">R</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <!-- 46 -->
+                                        <td scope="row">24&#189"</td>
+                                        <td scope="row">25&#189"</td>
+                                        <td scope="row">26&#189"</td>
+                                        <td scope="row">27&#189"</td>
+                                        <!-- 48 -->
+                                        <td scope="row">25"</td>
+                                        <td scope="row">26"</td>
+                                        <td scope="row">27"</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <!-- 50 -->
+                                        <td scope="row">25"</td>
+                                        <td scope="row">26"</td>
+                                        <td scope="row">27"</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <!-- 52 -->
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row">26.5"</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <!-- 54 -->
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row">26.5"</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <!-- 56 -->
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row">26.5"</td>
+                                        <td scope="row" class="tNA">-</td>
+                                        <td scope="row" class="tNA">-</td>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row p-2 mx-0">
+                            <!-- Child Jacket Length Table -->
+                            <div class="col pt-3 border shadow bg-light table-responsive hideTable childTable">
+                                <table class="table table-sm table-bordered">
+                                    <caption class="text-center">
+                                        Actual sleeve lengths for Childrens kilt jacket.<br>We only offer one sleeve
+                                        length
+                                        for
+                                        children but these can be hemmed if required.
+                                    </caption>
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th scope="col">18"</th>
+                                            <th scope="col">20"</th>
+                                            <th scope="col">22"</th>
+                                            <th scope="col">24"</th>
+                                            <th scope="col">26"</th>
+                                            <th scope="col">28"</th>
+                                            <th scope="col">30"</th>
+                                            <th scope="col">32"</th>
+                                            <th scope="col">34"</th>
+                                            <th scope="col">36"</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td scope="row">10"</td>
+                                            <td scope="row">12"</td>
+                                            <td scope="row">14"</td>
+                                            <td scope="row">16"</td>
+                                            <td scope="row">18"</td>
+                                            <td scope="row">20"</td>
+                                            <td scope="row">21"</td>
+                                            <td scope="row">22"</td>
+                                            <td scope="row">23"</td>
+                                            <td scope="row">24"</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row p-2">
+                            <!-- Shoes -->
+                            <div class="col-md-6 form-group">
+                                <h4 class="text-left mb-0 text-black">Shoe Size</h4>
+                                <select class="form-select formInput border border-dark" name="shoe" id="shoe">
+                                    <option hidden selected disabled></option>
+                                    <option value="5" class="childSizes hideSizes">UK 5 (US 6 / EU 21½)</option>
+                                    <option value="6" class="childSizes hideSizes">UK 6 (US 7 / EU 23)</option>
+                                    <option value="7" class="childSizes hideSizes">UK 7 (US 8 / EU 24)</option>
+                                    <option value="8" class="childSizes hideSizes">UK 8 (US 9 / EU 25½)</option>
+                                    <option value="9" class="childSizes hideSizes">UK 9 (US 10 / EU 26½)</option>
+                                    <option value="10" class="childSizes hideSizes">UK 10 (US 11 / EU 28)</option>
+                                    <option value="11" class="childSizes hideSizes">UK 11 (US 12 / EU 29)</option>
+                                    <option value="12" class="childSizes hideSizes">UK 12 (US 13 / EU 30½)</option>
+                                    <option value="13" class="childSizes hideSizes">UK 13 (US 1 / EU 32)</option>
+                                    <option value="1" class="childSizes hideSizes">UK 1 (US 2 / EU 33)</option>
+                                    <option value="2" class="childSizes hideSizes">UK 2 (US 3 / EU 34½)</option>
+                                    <option value="3" class="childSizes hideSizes">UK 3 (US 4 / EU 35½)</option>
+                                    <option value="4">UK 4 (US 5 / EU 37)</option>
+                                    <option value="5">UK 5 (US 6 / EU 38)</option>
+                                    <option value="6">UK 6 (US 7 / EU 39)</option>
+                                    <option value="6½">UK 6½ (US 7½ / EU 40)</option>
+                                    <option value="7" class="adultSizes">UK 7 (US 8 / EU 40½)</option>
+                                    <option value="7½" class="adultSizes">UK 7½ (US 8½ / EU 41)</option>
+                                    <option value="8" class="adultSizes">UK 8 (US 9 / EU 42)</option>
+                                    <option value="8½" class="adultSizes">UK 8½ (US 9½ / EU 42½)</option>
+                                    <option value="9" class="adultSizes">UK 9 (US 10 / EU 43)</option>
+                                    <option value="9½" class="adultSizes">UK 9½ (US 10½ / EU 44)</option>
+                                    <option value="10" class="adultSizes">UK 10 (US 11 / EU 44½)</option>
+                                    <option value="10½" class="adultSizes">UK 10½ (US 11½ / EU 45)</option>
+                                    <option value="11" class="adultSizes">UK 11 (US 12 / EU 46)</option>
+                                    <option value="11½" class="adultSizes">UK 11½ (US 12½ / EU 46½)</option>
+                                    <option value="12" class="adultSizes">UK 12 (US 13 / EU 47)</option>
+                                    <option value="13" class="adultSizes">UK 13 (US 14 / EU 48)</option>
+                                    <option value="14" class="adultSizes">UK 14 (US 15 / EU 49½)</option>
+                                </select>
+                            </div>
+
+                            <!-- Blank -->
+                            <div class=" col-md-6">
+                            </div>
+                        </div>
+
+                        <div class="row p-2 mb-3">
+                            <!-- Shirt -->
+                            <div class="col-md-6 form-group">
+                                <h4 class="text-left mb-0 text-black">Collar Size</h4>
+                                <select class="form-select formInput border border-dark" name="collar" id="collar">
+                                    <option hidden selected disabled></option>
+                                    <option value="10" class="childSizes hideSizes">10" (25cm)</option>
+                                    <option value="10.5" class="childSizes hideSizes">10½" (27cm)</option>
+                                    <option value="11" class="childSizes hideSizes">11" (28cm)</option>
+                                    <option value="11.5" class="childSizes hideSizes">11½" (29cm)</option>
+                                    <option value="12" class="childSizes hideSizes">12" (30cm)</option>
+                                    <option value="12.5" class="childSizes hideSizes">12½" (32cm)</option>
+                                    <option value="13" class="childSizes hideSizes">13" (33cm)</option>
+                                    <option value="13.5" class="childSizes hideSizes">13½" (34cm)</option>
+                                    <option value="14">14" (36cm)</option>
+                                    <option value="14.5" class="adultSizes">14½" (37cm)</option>
+                                    <option value="15" class="adultSizes">15" (38cm)</option>
+                                    <option value="15.5" class="adultSizes">15½" (39cm)</option>
+                                    <option value="16" class="adultSizes">16" (41cm)</option>
+                                    <option value="16.5" class="adultSizes">16½" (42cm)</option>
+                                    <option value="17" class="adultSizes">17" (43cm)</option>
+                                    <option value="17.5" class="adultSizes">17½" (44cm)</option>
+                                    <option value="18" class="adultSizes">18" (46cm)</option>
+                                    <option value="19" class="adultSizes">19" (48cm)</option>
+                                    <option value="20" class="adultSizes">20" (51cm)</option>
+                                </select>
+                            </div>
+
+                            <!-- Shirt Fit -->
+                            <div class=" col-md-6">
+                                <h4 class="text-left mb-0 text-black">Shirt Fit</h4>
+                                <select class="form-select formInput border border-dark" name="sFit" id="sFit">
+                                    <option hidden selected disabled></option>
+                                    <option value="Regular">Regular Fit</option>
+                                    <option value="Slim" class="adultSizes">Slim Fit</option>
+                                    <option value="Tall" class="adultSizes">Tall Fit</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" id="submit">
+                        <div class="d-grid">
+                            <button class="btn btn-secondary btn-block btn-lg mb-4 shadow">Submit Hire</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="px-0 col-md-3 col-lg-2 mt-3 d-none d-md-block fs-5">
+                    <div class="row px-2 sideBarText">
+                        <ul>
+                            <li>
+                                <div class="d-flex">
+                                    <div class="col text-start">
+                                        <p class="fs-3">Prices</p>
+                                    </div>
+                                    <div class="col text-end">
+                                        <p class="fs-2"><a href="#custDetails"><i
+                                                    class="fa-solid fa-circle-arrow-up text-right"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#custDetails">Customer Details</a></li>
+                            <li><a href="#hireDetails">Hire Details</a></li>
+                            <li><a href="#outfitDetails">Outfit Details</a></li>
+                            <ul>
+                                <li><a href="#outfitKilt">Kilts</a></li>
+                                <li><a href="#outfitJacket">Jackets</a></li>
+                                <li><a href="#outfitSporran">Sporrans</a></li>
+                                <li><a href="#outfitShoes">Shoes</a></li>
+                                <li><a href="#outfitSocks">Socks</a></li>
+                                <li><a href="#outfitFlashes">Flashes</a></li>
+                                <li><a href="#outfitTies">Ties</a></li>
+                            </ul>
+                            <li><a href="#extras">Upgrades & Extras</a></li>
+                            <li><a href="#sizes">Measurements</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row bg-light text-muted border-top">
+                <div class="col-6 mt-2">
+                    <p>&copy Ross Lyall 2024</p>
+                </div>
+                <div class="col-6 mt-2" id="footerEmail">
+                    <p>For all enquiries - please contact <i class="fa-regular fa-envelope"></i>
+                        ross@slanj.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d2012d6523.js" crossorigin="anonymous"></script>
+
+    <script src="smf.js"></script>
+    <script src="https://kit.fontawesome.com/d2012d6523.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

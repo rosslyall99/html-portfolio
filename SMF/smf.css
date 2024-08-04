@@ -1,0 +1,237 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Navbar */
+.nav-link,
+.navbar-nav li,
+.dropdown-item {
+    font-size: 1.3vw;
+    font-weight: 400;
+    color: #000
+}
+
+.navbar img {
+    margin-left: 1rem;
+}
+
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
+.formInput {
+    font-size: 1.3rem;
+}
+
+/* IndexHeader */
+.headerImage {
+    /* position: relative; */
+    background-image: url("/images/largeImages/headerImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-block {
+    background-color: #ffffff50;
+    color: #ffffff;
+    text-align: center;
+    margin: 5%;
+    padding: 1%;
+    width: 60vw;
+}
+
+.text-block button {
+    margin: 2%;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+.sideBarText {
+    position: sticky;
+    top: 11%;
+}
+
+.sideBarTextHeader {
+    font-weight: 700;
+}
+
+.sideBarText li {
+    text-align: left;
+    list-style: none;
+
+}
+
+.sideBarText a {
+    color: #000;
+    text-decoration: none;
+}
+
+.sideBarText a:hover {
+    list-style: none;
+    cursor: pointer;
+    color: #002fffec;
+}
+
+.topMenu {
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+}
+
+.smallMenu {
+    position: sticky;
+    top: 12%;
+}
+
+.backToTop {
+    position: fixed;
+    bottom: 0%;
+    right: 3%;
+    color: #000;
+}
+
+label img:hover {
+    opacity: 90%;
+    border: 1px solid #000
+}
+
+/* Radio Selection */
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Radio Images */
+[type=radio]+img {
+    cursor: pointer;
+    outline: 1px solid #e0e0e0e8;
+}
+
+/* Radio Checked */
+[type=radio]:checked+img {
+    transform: revert;
+    outline: 1px solid #000;
+    background-color: #bbdefb;
+}
+
+.img-fluid {
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+.navMenu li {
+    list-style: none;
+    font-size: 1.5vw;
+}
+
+.navMenu a {
+    text-decoration: none;
+    color: #000;
+}
+
+h3 {
+    font-size: 1.8vw;
+}
+
+h4 {
+    font-size: 1.3vw;
+}
+
+label {
+    font-size: 1.1vw;
+    cursor: pointer;
+}
+
+[type=checkbox] {
+    display: none;
+}
+
+.extrasImages {
+    border: 1px solid #e0e0e0e8;
+}
+
+.extrasSelector {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+[type=checkbox]:checked+label {
+    transform: revert;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background-color: #fbd5bb;
+}
+
+/* Table */
+.tNA {
+    background-color: #d5d5d5 !important;
+}
+
+.tBlank {
+    border-left-style: hidden;
+    border-right-style: hidden;
+}
+
+.table {
+    border: 1px solid #000;
+    font-size: 1.1vw;
+    margin-bottom: 0;
+}
+
+/* Youtube Logo */
+#ytText {
+    color: #000;
+    text-decoration: none;
+}
+
+#ytText:hover {
+    opacity: 50%;
+}
+
+/* Footer */
+#footerEmail {
+    text-align: right;
+}
+
+#hireDetails,
+#custDetails,
+#outfitDetails,
+#extras,
+#sizes,
+#outfitKilt,
+#outfitJacket,
+#outfitSporran,
+#outfitShoes,
+#outfitSocks,
+#outfitFlashes,
+#outfitTies {
+    scroll-margin-top: 84px;
+}
+
+.disabled {
+    background-color: #8b8f97;
+    opacity: 40%;
+    pointer-events: none;
+}
+
+.hideTable,
+.hideSizes,
+.hideHeight {
+    display: none;
+}
