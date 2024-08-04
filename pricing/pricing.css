@@ -28,7 +28,7 @@ body {
 
 /* HEADER */
 .headerImage {
-    background-image: url("/images/misc/priceHeaderImage.png");
+    background-image: url("images/misc/priceHeaderImage.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
