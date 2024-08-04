@@ -1,0 +1,117 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Navbar */
+.nav-link,
+.navbar-nav li,
+.dropdown-item {
+    font-size: 1.3vw;
+    font-weight: 400;
+    color: #000
+}
+
+.navbar img {
+    margin-left: 1rem;
+}
+
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
+.formInput {
+    font-size: 1.3rem;
+}
+
+/* IndexHeader */
+.headerImage {
+    /* position: relative; */
+    background-image: url("/images/largeImages/headerImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-block {
+    background-color: #ffffff50;
+    color: #ffffff;
+    text-align: center;
+    margin: 5%;
+    padding: 1%;
+    width: 60vw;
+}
+
+.text-block button {
+    margin: 2%;
+}
+
+/* Page Links */
+
+#appointmentTypes,
+#consultation,
+#kiltMeasurement,
+#fullTryOn,
+#hireAnyTartan,
+#childsMeasurement,
+#adultRemeasure,
+#noAppointment,
+#turningUp,
+#respect {
+    scroll-margin-top: 84px;
+}
+
+.sideBarText {
+    position: sticky;
+    top: 11%;
+}
+
+.sideBarTextHeader {
+    font-weight: 700;
+}
+
+.sideBarText li {
+    text-align: left;
+    list-style: none;
+
+}
+
+.sideBarText a {
+    color: #000;
+    text-decoration: none;
+}
+
+.sideBarText a:hover {
+    list-style: none;
+    cursor: pointer;
+    color: #002fffec;
+}
+
+.topMenu {
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+}
+
+.smallMenu {
+    position: sticky;
+    top: 12%;
+}
+
+.backToTop {
+    position: fixed;
+    bottom: 0%;
+    right: 3%;
+    color: #000;
+}
+
+/* Footer */
+
+.footer {
+    bottom: 0;
+}
+
+.appointmentHeader {
+    background-color: rgb(233, 236, 229);
+}
