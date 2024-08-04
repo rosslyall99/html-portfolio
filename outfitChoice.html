@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slanj Kilt Hire Self Measurement</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar bg-secondary-subtle navbar-expand-lg sticky-top border-bottom">
+        <div class=" container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/logos/NewSlanjLogoGrey.svg" alt="Slanj Kilts Logo" width="80">
+            </a>
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Outfits</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="/pricing/pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Hire Any Tartan</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="/outfitChoice.html">Self-Measurement</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Discounts</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="/faqs/faqs.html">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="headerImage container-fluid mb-3 d-flex justify-content-center align-items-center">
+        <div class="text-block shadow">
+            <h1>Hire Options</h1>
+            <h2>Member of a group booking or on your own? Select below.</h2>
+            <!-- <button type="button" class="btn btn-outline-light btn-lg">Get Started</button> -->
+        </div>
+    </header>
+
+    <!-- Cards -->
+    <div class="container p-5 shadow">
+        <div class="row d-flex flex-row">
+            <div class="col-lg-4 d-flex align-items-stretch pb-2">
+                <div class="card">
+                    <img class="card-img-top" src="/images/largeImages/solo.jpg" alt="Solo Kilt Hire">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center bg-light border py-1">Solo Hire</h5>
+                        <p class="card-text text-center py-2 d-flex align-items-center justify-content-center">Click
+                            below if you are submitting a Solo Kilt Hire that is not a member of
+                            a group booking.</p>
+                        <a href="/SMF/smf.html" class="btn btn-outline-dark mt-auto shadow">SOLO HIRE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-stretch pb-2">
+                <div class="card">
+                    <img class="card-img-top" src="/images/largeImages/groupChosen.jpg" alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center bg-light border py-1">Group Booking - Sizes Only</h5>
+                        <p class="card-text text-center py-2 d-flex align-items-center justify-content-center">Click
+                            below if you are a member of group booking where the outfit has
+                            already been chosen for you. You will only be for the party details and your
+                            measurements.</p>
+                        <a href="#" class="btn btn-outline-dark mt-auto shadow">GROUP HIRE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-stretch pb-2">
+                <div class="card">
+                    <img class="card-img-top" src="/images/largeImages/groupChoice.jpg" alt="Group Hire Free Choice">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center bg-light border py-1">Group Booking - Free Choice</h5>
+                        <p class="card-text text-center py-2 d-flex align-items-center justify-content-center">Click
+                            below if you are a member of a group booking where you have a free
+                            choice of outfit. You will be asked for the group details, then you will choose an outfit
+                            and submit your measurements.</p>
+                        <a href="#" class="btn btn-outline-dark mt-auto shadow">GROUP HIRE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row bg-light text-muted border-top">
+                <div class="col-6 mt-2">
+                    <p>&copy Ross Lyall 2024</p>
+                </div>
+                <div class="col-6 mt-2" id="footerEmail">
+                    <p>For all enquiries - please contact <i class="fa-regular fa-envelope"></i>
+                        ross@slanj.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d2012d6523.js" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/d2012d6523.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
